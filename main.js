@@ -7,6 +7,9 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
     let resultMessage;
     let resultValue;
+    if(!playerSelection) {
+        throw new Error('No input was received');
+    }
     if(!isNaN(playerSelection)) {
         throw new Error('Numbers not accepted as input');
     }
